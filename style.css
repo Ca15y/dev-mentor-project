@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+/*font-family: "Montserrat", sans-serif;
+font-optical-sizing: auto;
+font-weight: <weight>;
+font-style: normal;
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px;
+    min-height: 100vh;
+    display: fixed;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin: 30px auto;
+    padding: 0 30px;
+}
+.grid{
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.img img{
+    max-width: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: inherit;
+}
+.card-content{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+h6.prod-class{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color:  hsl(228, 12%, 48%);
+    font-size: 95%;
+}
+h1.product-name{
+    font-family: "fraunces", sans-serif;
+    font-size: 34px;
+    line-height: 1em;
+    color: hsl(212, 21%, 14%) 
+}
+p.product-des{
+    color:  hsl(228, 12%, 48%);
+    line-height: 1.6em;
+}
+.price{
+    display: flex;
+    align-items: center;
+}
+p.new-price{
+    font-family: "fraunces", sans-serif;
+    font-size: 27px;
+    color: hsl(158, 36%, 37%);
+    padding-right: 25px;
+}
+p.old-price{
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+    font-weight:600;
+}
+button.add-to-cart{
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+button.add-to-cart:hover{
+    background-color: hsl(158, 97%, 15%);;
+}
+button.add-to-cart img{
+    padding-right: 7px;
+}
+@media only screen and (max-width: 628px){
+    .grid{
+        grid-template-columns: 1fr ;
+    }
+    .img img{
+        max-height: 450px;
+        object-fit: cover;
+    }
+    .card-content{
+        display: block;
+    }
+    h6.prod-class, h1.product-name, .price{
+        padding-bottom: 23px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .container{
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+    .img img{
+        max-height: 290px;
+    }
+    .card-content{
+        padding: 24px;
+    }
+    h6.prod-class, h1.product-name, .price{
+        padding-bottom: 16px;}
